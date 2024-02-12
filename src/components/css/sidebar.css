@@ -1,0 +1,17 @@
+.container_sidebar{
+    position: sticky;
+    top: 40px;
+    width: 30vh;
+    height:100vh
+
+  } 
+  .list_sidebar{
+    list-style: none;
+  }
+  
+  .item_sidebar{
+    color: var(--textSoft);
+    font-weight: bold;
+    font-size: 13px;
+    margin: 10px 0px;
+  }
