@@ -6,6 +6,7 @@ import {
   MdPeople,
   MdOutlineSettings,
   MdHelpCenter,
+  MdAlarm
 } from "react-icons/md";
 import MenuLink from './menulink/menulink';
 
@@ -24,21 +25,26 @@ const menuItems = [
         path: "/dashboard/teams",
         icon: <MdPeople />,
       },
+
     ],
   },
   {
     title: "User",
-    list: [
-      {
-        title: "Settings",
-        path: "/dashboard/settings",
-        icon: <MdOutlineSettings />,
-      },
-      {
-        title: "Help",
-        path: "/dashboard/help",
-        icon: <MdHelpCenter />,
-      },
+    list: [{
+      title: "Add Alarm",
+      path: "/dashboard/teams",
+      icon: <MdAlarm />,
+    },
+    {
+      title: "Settings",
+      path: "/dashboard/settings",
+      icon: <MdOutlineSettings />,
+    },
+    {
+      title: "Help",
+      path: "/dashboard/help",
+      icon: <MdHelpCenter />,
+    },
     ],
   },
 ];
@@ -49,11 +55,11 @@ const Sidebar = () => {
     <div>
       <div className='container_sidebar'>
         <ul className='list_sidebar'>
-          {menuItems.map((item)=>(
+          {menuItems.map((item) => (
             <li key={item.title}>
               <span className='item_sidebar'>{item.title}</span>
-              {item.list.map((subitem)=>(
-                <MenuLink item ={subitem} key = {subitem.title} ></MenuLink>
+              {item.list.map((subitem) => (
+                <MenuLink item={subitem} key={subitem.title} ></MenuLink>
               ))}
             </li>
           ))}
@@ -61,8 +67,8 @@ const Sidebar = () => {
       </div>
 
     </div>
-  
-    )
+
+  )
 }
 
 export default Sidebar

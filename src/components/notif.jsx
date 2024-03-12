@@ -5,28 +5,32 @@ import { MdBuild, MdDone, MdErrorOutline, MdInfoOutline } from 'react-icons/md';
 const logs = {
   logs: [
     {
-      log: "hello world",
+      log: "Repair",
+      remark:'repair sucessful',
       location: "Location A",
       time: "11:30 AM",
       personInCharge: "John Doe",
       type: "repair"
     },
     {
-      log: 'working',
+      log: 'Success',
+      remark:'Working properly',
       location: "Location B",
       time: "12:45 PM",
       personInCharge: "Jane Doe",
       type: 'fixed'
     },
     {
-      log: 'crashed',
+      remark:'crashed',
+      log: 'Error',
       location: "Location C",
       time: "2:00 PM",
       personInCharge: "Bob Smith",
       type: 'inspection'
     },
     {
-      log: 'crashed',
+      log: 'Info',
+      remark:'needs inspection',
       location: "Location D",
       time: "3:30 PM",
       personInCharge: "Alice Johnson",
@@ -47,7 +51,7 @@ const Notif = () => {
     repair: 'blue',
     fixed: 'green',
     inspection: 'red',
-    other: 'grey'
+    other: 'grey',
   }
 
   return (
@@ -74,6 +78,8 @@ const Notif = () => {
             <div><strong>Location:</strong> {log.location}</div>
             <div><strong>Time:</strong> {log.time}</div>
             <div><strong>Person in Charge:</strong> {log.personInCharge}</div>
+            <div><strong>Remark:</strong> {log.remark}</div>
+
           </div>
         </div>
       ))}

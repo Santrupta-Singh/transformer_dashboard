@@ -14,7 +14,7 @@ const Homepage = () => {
       <div className='content_homepage'>
         <Sidebar />
         <TableauEmbed
-        sourceUrl="https://public.tableau.com/views/Delhi-dash1/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
+        sourceUrl="https://prod-apnortheast-a.online.tableau.com/t/saikhadloya247a601d44b3f/views/circlehead-new/Dashboard1?:origin=card_share_link&:embed=n"
         width='1500' // Set width to 100%
         height='800' // Set height to 100%
         device="desktop"
